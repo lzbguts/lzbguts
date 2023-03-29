@@ -41,7 +41,7 @@
 	<img src="./images/stats.png"></img>
 	<div align="center">
 		<br>
-		<a href="https://github.com/anuraghazra/github-readme-stats"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=lzbguts&layout=compact&theme=radical&hide_border=true" width=60%/></a>
+		<a href="https://github.com/anuraghazra/github-readme-stats"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=lzbguts&layout=compact&theme=radical&hide_border=true&hide=kotlin" width=60%/></a>
  		<a href="https://git.io/streak-stats"><img src="http://github-readme-streak-stats.herokuapp.com?user=lzbguts&theme=radical&hide_border=true" width=60%/></a>
 	</div>
 </div>
