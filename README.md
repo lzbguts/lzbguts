@@ -32,7 +32,7 @@
 		<br>
 		<a href="https://www.linkedin.com/in/gutsfelicidade/"><img width="240" height="56" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></img></a>&nbsp;&nbsp;
 		<a href="mailto:gustavo.h.felicidade@gmail.com"><img width="167" height="56" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></img></a>&nbsp;&nbsp;
-		<a href="https://www.instagram.com/lzbguts/"><img width="250" height="56" src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"></img></a>&nbsp;&nbsp;
+<!-- 		<a href="https://www.instagram.com/lzbguts/"><img width="250" height="56" src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"></img></a>&nbsp;&nbsp; -->
 	</div>
 </div>
 <hr></hr>
