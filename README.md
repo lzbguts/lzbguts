@@ -1,10 +1,10 @@
 <div>
-	<img src="./images/banner.gif"></img>
+	<img src="./public/images/banner.gif"></img>
 </div>
 <hr></hr>
 <br>
 <div>
-	<img src="./images/skills.png"></img>
+	<img src="./public/images/skills.png"></img>
 	<div align="center">
 		<div>
 			<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="60" height="70" />
@@ -27,18 +27,17 @@
 <hr></hr>
 <br>
 <div>
-	<img src="./images/contact.png"></img>
+	<img src="./public/images/contact.png"></img>
 	<div align="center">
 		<br>
 		<a href="https://www.linkedin.com/in/gutsfelicidade/"><img width="240" height="56" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></img></a>&nbsp;&nbsp;
 		<a href="mailto:gustavo.h.felicidade@gmail.com"><img width="167" height="56" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></img></a>&nbsp;&nbsp;
-<!-- 		<a href="https://www.instagram.com/lzbguts/"><img width="250" height="56" src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"></img></a>&nbsp;&nbsp; -->
 	</div>
 </div>
 <hr></hr>
 <br>
 <div>
-	<img src="./images/stats.png"></img>
+	<img src="./public/images/stats.png"></img>
 	<div align="center">
 		<br>
 		<a href="https://github.com/anuraghazra/github-readme-stats"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=lzbguts&layout=compact&theme=radical&hide_border=true&hide=kotlin" width=60%/></a>
