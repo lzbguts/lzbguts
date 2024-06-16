@@ -1,3 +1,13 @@
 {
-  "Test": "Teste"
+  "Change language": "Mudar idioma",
+  "Portuguese": "Português",
+  "English": "Inglês",
+  "Projects": "Projetos",
+  "Contact": "Contato",
+  "Full Stack Developer": "Desenvolvedor Full Stack",
+  "Hi, my name is Gustavo and I'm a Brazilian Full Stack Developer, currently a Systems Development Technician and studying a higher education course in Systems Analysis and Development :)": "Opa, meu nome é Gustavo e sou um Desenvolvedor Full Stack brasileiro, atualmente Técnico em Desenvolvimento de Sistemas e cursando o curso superior de Análise e Desenvolvimento de Sistemas :)",
+  "Academic Education": "Formação Acadêmica",
+  "Professional Experience": "Experiência Profissional",
+  "Present": "Atual",
+  "History": "Histórico"
 }

@@ -1,0 +1,62 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+enum LinkType {
+  Project
+  Company
+  SocialMedia
+}
+
+enum InstitutionType {
+  Company
+  School
+}
+
+model Project {
+  id             String @id @default(cuid()) @map("_id")
+  title          String
+  description    String
+  description_pt String
+  image          String
+  Link           Link[]
+}
+
+model Link {
+  id          String        @id @default(cuid()) @map("_id")
+  icon        String
+  name        String
+  url         String
+  type        LinkType      @default(Project)
+  //
+  Project     Project?      @relation(fields: [projectId], references: [id])
+  projectId   String?
+  Institution Institution[]
+}
+
+model Institution {
+  id      String          @id @default(cuid()) @map("_id")
+  name    String
+  image   String
+  Link    Link            @relation(fields: [linkId], references: [id])
+  linkId  String
+  type    InstitutionType
+  History History[]
+}
+
+model History {
+  id             String       @id @default(cuid()) @map("_id")
+  role           String?
+  role_pt        String?
+  description    String?
+  description_pt String?
+  initialDate    DateTime
+  finalDate      DateTime?
+  Institution    Institution? @relation(fields: [institutionId], references: [id])
+  institutionId  String?
+}
