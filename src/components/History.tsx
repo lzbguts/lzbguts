@@ -1,26 +1,10 @@
 "use client"
 
 import { useLocale, useTranslations } from "next-intl";
-import Image from "next/image";
-import { useMediaQuery } from "usehooks-ts";
-import {
-  Step,
-  Stepper,
-  useStepper,
-  type StepItem,
-} from "@/components/ui/stepper"
-import { BsFileBarGraph } from "react-icons/bs";
 import { Separator } from "@/components/ui/separator";
 import { InstitutionWithProps } from "@/types/Institution";
-import { formatRelative, subDays, format, addDays } from 'date-fns'
-import { es, ru } from 'date-fns/locale'
+import { format, addDays } from 'date-fns'
 import { Badge } from "@/components/ui/badge";
-
-const steps = [
-  { label: "Step 1" },
-  { label: "Step 2" },
-  { label: "Step 3" },
-] satisfies StepItem[]
 
 type Props = {
   companies: InstitutionWithProps[]

@@ -33,7 +33,7 @@ export function SidebarMobile({ items, socialMedia }: Props) {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button size='icon' variant='ghost' className='fixed top-3 left-3'>
+        <Button size='icon' variant='ghost' className='absolute top-3 left-3'>
           <Menu size={20} />
         </Button>
       </SheetTrigger>

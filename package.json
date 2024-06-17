@@ -1,6 +1,6 @@
 {
   "name": "lzbguts",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -15,7 +15,8 @@
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.5.4",
-    "@prisma/client": "^5.12.1",
+    "@hookform/resolvers": "^3.6.0",
+    "@prisma/client": "^5.15.0",
     "@radix-ui/react-avatar": "^1.0.4",
     "@radix-ui/react-collapsible": "^1.0.3",
     "@radix-ui/react-dialog": "^1.0.5",
@@ -26,6 +27,8 @@
     "@radix-ui/react-separator": "^1.0.3",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-switch": "^1.0.3",
+    "@radix-ui/react-toast": "^1.1.5",
+    "@radix-ui/react-tooltip": "^1.0.7",
     "axios": "^1.6.8",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
@@ -37,23 +40,27 @@
     "next": "^14.2.4",
     "next-intl": "^3.11.3",
     "next-themes": "^0.3.0",
+    "nodemailer": "^6.9.13",
     "react": "^18",
     "react-dom": "^18",
+    "react-hook-form": "^7.52.0",
     "react-icons": "^5.2.0",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
     "usehooks-ts": "^3.1.0",
-    "vaul": "^0.9.0"
+    "vaul": "^0.9.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/nodemailer": "^6.4.15",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "dotenv-cli": "^7.4.1",
     "eslint": "^8",
     "eslint-config-next": "14.2.2",
     "postcss": "^8",
-    "prisma": "^5.12.1",
+    "prisma": "^5.15.0",
     "tailwindcss": "^3.4.4",
     "typescript": "^5"
   }

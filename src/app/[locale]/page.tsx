@@ -1,9 +1,10 @@
-import { Banner } from "./Banner";
-import { History } from "./History";
 import { getInstitutions, getProjects } from "@/actions";
 import { InstitutionWithProps } from "@/types/Institution";
-import dynamic from "next/dynamic";
-import { Projects } from "./Projects";
+import { Banner } from "@/components/Banner";
+import { History } from "@/components/History";
+import { Projects } from "@/components/Projects";
+import { Skills } from "@/components/Skills";
+import { Contact } from "@/components/Contact";
 
 export default async function Home() {
   const institutions = await getInstitutions() || [];
@@ -32,6 +33,8 @@ export default async function Home() {
       <Banner />
       <History companies={companies} schools={schools} />
       <Projects projects={projects} />
+      <Skills />
+      <Contact />
     </div>
   );
 }
