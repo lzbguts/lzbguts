@@ -8,6 +8,7 @@ const nextConfig = {
     loader: 'custom',
     loaderFile: './supabase-image-loader.js',
   },
+  optimizeFonts: false,
 }
 
 export default withNextIntl(nextConfig);
