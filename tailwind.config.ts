@@ -11,7 +11,7 @@ const config = {
   prefix: "",
   theme: {
     fontFamily: {
-      sans: ["Montserrat"],
+      sans: ['var(--font-inter)'],
     },
     extend: {
       colors: {
