@@ -11,7 +11,8 @@
     "migrate:dev": "npx dotenv -e .env.local -- prisma migrate dev",
     "prisma:studio": "npx dotenv -e .env.local -- prisma studio",
     "migrate": "npx dotenv -e .env.local -- prisma migrate deploy",
-    "build:production": "npx dotenv -e .env.local -- npm run migrate && npm run generate && npm run build"
+    "build:production": "npx dotenv -e .env.local -- npm run migrate && npm run generate && npm run build",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.5.4",
