@@ -1,4 +1,4 @@
-import { getInstitutions, getProjects } from "@/actions";
+import { getInstitutions, getProjects } from "@/lib/actions";
 import { InstitutionWithProps } from "@/types/Institution";
 import { Banner } from "@/components/Banner";
 import { History } from "@/components/History";
@@ -25,14 +25,16 @@ export default async function Home() {
     return acc
   }, [[], []] as [InstitutionWithProps[], InstitutionWithProps[]])
 
-  const companies = companiesRaw.sort((a, b) => new Date(b.History[0].initialDate || "").getTime() - new Date(a.History[0].initialDate || "").getTime())
-  const schools = schoolsRaw.sort((a, b) => new Date(b.History[0].initialDate || "").getTime() - new Date(a.History[0].initialDate || "").getTime())
+  const companies = companiesRaw.sort((a, b) => new Date(b.History[0]?.initialDate || "").getTime() - new Date(a.History[0]?.initialDate || "").getTime())
+  const schools = schoolsRaw.sort((a, b) => new Date(b.History[0]?.initialDate || "").getTime() - new Date(a.History[0]?.initialDate || "").getTime())
+
+  const projectsByDate = projects.sort((a, b) => new Date(b.initialDate || "").getTime() - new Date(a.initialDate || "").getTime())
 
   return (
     <div className="flex flex-col space-y-24">
       <Banner />
       <History companies={companies} schools={schools} />
-      <Projects projects={projects} />
+      <Projects projects={projectsByDate} />
       <Skills />
       <Contact />
     </div>

@@ -10,8 +10,6 @@
   "Professional Experience": "Experiência Profissional",
   "Present": "Atual",
   "History": "Histórico",
-  "Repository": "Repositório",
-  "Deploy": "Deploy",
   "Name": "Nome",
   "Message": "Mensagem",
   "Success!": "Sucesso!",
@@ -21,5 +19,6 @@
   "Email must not contain more than 255 character(s)": "O email não deve conter mais de 255 caractere(s)",
   "Message must contain at least 3 character(s)": "A mensagem deve conter no mínimo 3 caractere(s)",
   "Message must not contain more than 255 character(s)": "A mensagem não deve conter mais de 255 caractere(s)",
-  "Invalid email": "Email inválido"
+  "Invalid email": "Email inválido",
+  "Technologies": "Tecnologias"
 }

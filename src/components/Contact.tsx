@@ -17,10 +17,10 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "./ui/textarea";
-import { sendMail } from "@/actions";
 import { useToast } from "./ui/use-toast";
 import { useState } from "react";
 import { LoaderIcon } from "lucide-react";
+import { sendMail } from "@/lib/actions";
 
 export const Contact = () => {
   const t = useTranslations()
@@ -52,7 +52,7 @@ export const Contact = () => {
   }
 
   return (
-    <div id="projects" className={`flex flex-col space-y-4 items-center`}>
+    <div id="contact" className={`flex flex-col space-y-4 items-center`}>
       <p className="text-4xl">{t("Contact")}</p>
       <div className="w-full lg:w-6/12">
         <Form {...form}>

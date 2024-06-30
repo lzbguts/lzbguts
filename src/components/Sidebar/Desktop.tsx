@@ -12,10 +12,11 @@ import { Skeleton } from '../ui/skeleton';
 import { useState } from 'react';
 import { Item } from '.';
 import { LanguageSwitcher } from '../LanguageSwitcher';
+import { LinkWithProps } from '@/types/Link';
 
 type Props = {
   items: Item[]
-  socialMedia: Link[]
+  socialMedia: LinkWithProps[]
 }
 
 export function SidebarDesktop({ items, socialMedia }: Props) {
@@ -38,7 +39,7 @@ export function SidebarDesktop({ items, socialMedia }: Props) {
             socialMedia.map((link) => {
               return (
                 <a key={link.id} href={link.url} target="_blank">
-                  <Icon name={link.icon as any} className="w-12 h-12" />
+                  <Icon name={link.Icon?.name as any} className="w-12 h-12" />
                 </a>
               )
             })

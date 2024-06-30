@@ -7,9 +7,10 @@ import { SidebarMobile } from './Mobile';
 import { useTranslations } from 'next-intl';
 import { LucideIcon } from 'lucide-react';
 import { IconNames } from '../Icon';
+import { LinkWithProps } from '@/types/Link';
 
 type Props = {
-  socialMedia: Link[]
+  socialMedia: LinkWithProps[]
 }
 
 export type Item = {

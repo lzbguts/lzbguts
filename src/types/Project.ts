@@ -1,5 +1,7 @@
-import { Link, Project } from "@prisma/client";
+import { Link, Project, Technology } from "@prisma/client";
+import { LinkWithProps } from "./Link";
 
 export interface ProjectWithProps extends Project {
-  Link: Link[]
+  Link: LinkWithProps[]
+  Technology: Technology[]
 }

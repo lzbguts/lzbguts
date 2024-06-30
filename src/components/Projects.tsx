@@ -14,10 +14,10 @@ import Icon, { IconNames } from "@/components/Icon";
 import {
   Tooltip,
   TooltipContent,
-  TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
 import { Badge } from "@/components/ui/badge";
+import { Code } from "lucide-react";
 
 type Props = {
   projects: ProjectWithProps[]
@@ -46,11 +46,31 @@ export const Projects = ({ projects }: Props) => {
                   className="w-full h-48 sm:h-64 md:h-72 xl:h-80 2xl:h-96 rounded-lg shadow-lg object-cover"
                 />
                 <div className="flex flex-col items-center justify-center space-y-2">
-                  <h2 className="text-2xl font-bold">{project.title}</h2>
+                  <div className="flex flex-row space-x-2">
+                    <h2 className="text-2xl font-bold">{project.title}</h2>
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <Code className="w-6 h-6" />
+                      </TooltipTrigger>
+                      <TooltipContent className="bg-nav">
+                        <div className="flex flex-row space-x-2">
+                          {project.Technology?.map((tech) => (
+                            <Badge key={tech.id}>
+                              {tech.name}
+                            </Badge>
+                          ))}
+                        </div>
+                      </TooltipContent>
+                    </Tooltip>
+                  </div>
                   <p>{description}</p>
                   <div className="flex flex-row space-x-2">
-                    <TooltipProvider>
-                      {project.Link.map((link) => (
+                    {project.Link.map((link) => {
+                      const name = locale === "en"
+                        ? link.name
+                        : link[`name_${locale}` as keyof typeof link] as string ?? link.name
+
+                      return (
                         <Tooltip key={link.id}>
                           <TooltipTrigger>
                             <a
@@ -59,15 +79,15 @@ export const Projects = ({ projects }: Props) => {
                               rel="noopener noreferrer"
                               className="text-secondary hover:text-foreground-hover"
                             >
-                              <Icon name={link.icon as IconNames} className="w-6 h-6 " />
+                              <Icon name={link.Icon?.name as IconNames} className="w-6 h-6 " />
                             </a>
                           </TooltipTrigger>
                           <TooltipContent className="bg-nav">
-                            <p className="bg-nav text-foreground">{t(link.name)}</p>
+                            <p className="bg-nav text-foreground">{name}</p>
                           </TooltipContent>
                         </Tooltip>
-                      ))}
-                    </TooltipProvider>
+                      )
+                    })}
                   </div>
                 </div>
               </CarouselItem>
