@@ -20,7 +20,11 @@ export async function getInstitutions() {
   try {
     const institutions = await prisma.institution.findMany({
       include: {
-        History: true,
+        History: {
+          orderBy: {
+            initialDate: 'desc'
+          }
+        },
         Link: true
       }
     })
@@ -40,6 +44,9 @@ export async function getProjects() {
           }
         },
         Technology: true
+      },
+      orderBy: {
+        initialDate: 'desc'
       }
     })
     return projects
