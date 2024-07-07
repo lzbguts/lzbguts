@@ -53,7 +53,7 @@ export const Projects = ({ projects }: Props) => {
                         <Code className="w-6 h-6" />
                       </TooltipTrigger>
                       <TooltipContent className="bg-nav">
-                        <div className="flex flex-row space-x-2">
+                        <div className="flex flex-col gap-2">
                           {project.Technology?.map((tech) => (
                             <Badge key={tech.id}>
                               {tech.name}
