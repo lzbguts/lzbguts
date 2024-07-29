@@ -1,34 +1,35 @@
 "use server"
 
-import { prisma } from "@/utils/prisma"
-import { createTransport } from "nodemailer"
+import {prisma} from "@/utils/prisma"
+import {createTransport} from "nodemailer"
 
 export async function getSocialMedia() {
-  const socialMedia = await prisma.link.findMany({
-    where: {
-      type: 'SocialMedia'
-    },
-    include: {
-      Icon: true
-    }
+  try {
+    return await prisma.link.findMany({
+      where: {
+          type: 'SocialMedia'
+      },
+      include: {
+          Icon: true
+      }
   })
-
-  return socialMedia
+  } catch (error) {
+    console.error(error)
+  }
 }
 
 export async function getInstitutions() {
   try {
-    const institutions = await prisma.institution.findMany({
-      include: {
-        History: {
-          orderBy: {
-            initialDate: 'desc'
-          }
-        },
-        Link: true
-      }
+      return await prisma.institution.findMany({
+        include: {
+            History: {
+                orderBy: {
+                    initialDate: 'desc'
+                }
+            },
+            Link: true
+        }
     })
-    return institutions
   } catch (error) {
     console.error(error)
   }
@@ -36,20 +37,19 @@ export async function getInstitutions() {
 
 export async function getProjects() {
   try {
-    const projects = await prisma.project.findMany({
-      include: {
-        Link: {
-          include: {
-            Icon: true
-          }
+      return await prisma.project.findMany({
+        include: {
+            Link: {
+                include: {
+                    Icon: true
+                }
+            },
+            Technology: true
         },
-        Technology: true
-      },
-      orderBy: {
-        initialDate: 'desc'
-      }
+        orderBy: {
+            initialDate: 'desc'
+        }
     })
-    return projects
   } catch (error) {
     console.error(error)
   }

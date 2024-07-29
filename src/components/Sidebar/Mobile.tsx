@@ -52,7 +52,7 @@ export function SidebarMobile({ items, socialMedia }: Props) {
         <div className='h-full'>
           <div className="flex flex-row space-x-4 justify-center">
             {
-              socialMedia.map((link) => {
+              socialMedia?.map((link) => {
                 return (
                   <a key={link.id} href={link.url} target="_blank">
                     <Icon name={link.Icon?.name as any} className="w-12 h-12" />
