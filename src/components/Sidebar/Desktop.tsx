@@ -16,7 +16,7 @@ import { LinkWithProps } from '@/types/Link';
 
 type Props = {
   items: Item[]
-  socialMedia: LinkWithProps[]
+  socialMedia: LinkWithProps[] | undefined
 }
 
 export function SidebarDesktop({ items, socialMedia }: Props) {

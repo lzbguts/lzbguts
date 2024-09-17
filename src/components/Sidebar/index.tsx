@@ -5,12 +5,15 @@ import { SidebarDesktop } from './Desktop';
 import { Link } from '@prisma/client';
 import { SidebarMobile } from './Mobile';
 import { useTranslations } from 'next-intl';
-import { LucideIcon } from 'lucide-react';
+import { LucideIcon, Menu } from 'lucide-react';
 import { IconNames } from '../Icon';
 import { LinkWithProps } from '@/types/Link';
+import { SheetTrigger } from '../ui/sheet';
+import { Button } from '../ui/button';
+import { useState } from 'react';
 
 type Props = {
-  socialMedia: LinkWithProps[]
+  socialMedia: LinkWithProps[] | undefined;
 }
 
 export type Item = {
@@ -20,6 +23,7 @@ export type Item = {
 }
 
 export function Sidebar({ socialMedia }: Props) {
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
   const isDesktop = useMediaQuery('(min-width: 640px)', {
     initializeWithValue: false,
   });
@@ -57,5 +61,12 @@ export function Sidebar({ socialMedia }: Props) {
     return <SidebarDesktop items={items} socialMedia={socialMedia} />;
   }
 
-  return <SidebarMobile items={items} socialMedia={socialMedia} />;
+  return (
+    <>
+      <Button size='icon' variant='ghost' className='absolute top-3 left-3' onClick={() => setIsMobileOpen(true)}>
+        <Menu size={20} />
+      </Button>
+      <SidebarMobile items={items} socialMedia={socialMedia} isOpen={isMobileOpen} setIsOpen={setIsMobileOpen} />
+    </>
+  )
 }

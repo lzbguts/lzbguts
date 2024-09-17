@@ -36,7 +36,7 @@ export const Projects = ({ projects }: Props) => {
             const description = locale === "en" ? project.description : project[`description_${locale}` as keyof typeof project] as string
 
             return (
-              <CarouselItem key={project.id} className="flex flex-col items-center justify-start basis-2/3 xl:basis-1/3">
+              <CarouselItem key={project.id} className="flex flex-col gap-2 items-center justify-start basis-2/3 xl:basis-1/3">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -46,23 +46,7 @@ export const Projects = ({ projects }: Props) => {
                   className="w-full h-48 sm:h-64 md:h-72 xl:h-80 2xl:h-96 rounded-lg shadow-lg object-cover"
                 />
                 <div className="flex flex-col items-center justify-center space-y-2">
-                  <div className="flex flex-row space-x-2">
-                    <h2 className="text-2xl font-bold">{project.title}</h2>
-                    <Tooltip>
-                      <TooltipTrigger>
-                        <Code className="w-6 h-6" />
-                      </TooltipTrigger>
-                      <TooltipContent className="bg-nav">
-                        <div className="flex flex-col gap-2">
-                          {project.Technology?.map((tech) => (
-                            <Badge key={tech.id}>
-                              {tech.name}
-                            </Badge>
-                          ))}
-                        </div>
-                      </TooltipContent>
-                    </Tooltip>
-                  </div>
+                  <h2 className="text-2xl font-bold">{project.title}</h2>
                   <p>{description}</p>
                   <div className="flex flex-row space-x-2">
                     {project.Link.map((link) => {

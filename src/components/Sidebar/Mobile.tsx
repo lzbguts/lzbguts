@@ -2,42 +2,38 @@
 
 import {
   Sheet,
-  SheetClose,
   SheetContent,
   SheetHeader,
+  SheetTitle,
   SheetTrigger,
 } from '../ui/sheet';
 import { Button } from '../ui/button';
-import { LogOut, Menu, MoreHorizontal, Settings, X } from 'lucide-react';
-import { SidebarButtonSheet as SidebarButton } from './Button';
-import { usePathname } from 'next/navigation';
-import { Separator } from '../ui/separator';
-import { Drawer, DrawerContent, DrawerTrigger } from '../ui/drawer';
+import { Menu } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
-import { SidebarItems } from '@/types/Sidebar';
 import { Item } from '.';
-import { Link } from '@prisma/client';
 import Icon from '../Icon';
 import ThemeToggle from '../ThemeToggle';
 import { LanguageSwitcher } from '../LanguageSwitcher';
 import { LinkWithProps } from '@/types/Link';
+import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
+import { Dispatch, SetStateAction, useState } from 'react';
 
 type Props = {
   items: Item[]
-  socialMedia: LinkWithProps[]
+  socialMedia: LinkWithProps[] | undefined
+  isOpen: boolean
+  setIsOpen: Dispatch<SetStateAction<boolean>>
 }
 
-export function SidebarMobile({ items, socialMedia }: Props) {
+export function SidebarMobile({ items, socialMedia, isOpen, setIsOpen }: Props) {
   const currentYear = new Date().getFullYear();
 
   return (
-    <Sheet>
-      <SheetTrigger asChild>
-        <Button size='icon' variant='ghost' className='absolute top-3 left-3'>
-          <Menu size={20} />
-        </Button>
-      </SheetTrigger>
-      <SheetContent side='left' className='px-3 py-4 flex flex-col justify-center items-center'>
+    <Sheet open={isOpen} onOpenChange={setIsOpen}>
+      <SheetContent side='left' className='px-3 py-4 flex flex-col justify-center items-center' aria-describedby={undefined}>
+        <VisuallyHidden>
+          <SheetTitle>Sidebar</SheetTitle>
+        </VisuallyHidden>
         <SheetHeader className='flex flex-row justify-between items-center space-y-0'>
           <div className="flex flex-row justify-center">
             <Avatar className="w-44 h-44 border-2 border-foreground">
@@ -65,7 +61,7 @@ export function SidebarMobile({ items, socialMedia }: Props) {
             {
               items.map((item) => {
                 return (
-                  <a key={item.href} href={item.href} className="text-xl flex flex-row items-center space-x-4">
+                  <a key={item.href} href={item.href} className="text-xl flex flex-row items-center space-x-4" onClick={() => setIsOpen(false)}>
                     <Icon name={item.icon as any} />
                     <p>{item.label}</p>
                   </a>
