@@ -38,7 +38,7 @@ export const Projects = ({ projects }: Props) => {
             return (
               <CarouselItem key={project.id} className="flex flex-col gap-2 items-center justify-start basis-2/3 xl:basis-1/3">
                 <Image
-                  src={`/images/projects/${project.image}`}
+                  src={project.image}
                   alt={project.title}
                   width="0"
                   height="0"
