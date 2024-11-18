@@ -17,8 +17,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Gustavo Felicidade - Software Developer",
-  description: "Software Developer",
+  title: "Gustavo Felicidade - Software Engineer",
+  description: "Software Engineer",
 };
 
 export default async function LocaleLayout({

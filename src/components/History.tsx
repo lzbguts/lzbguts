@@ -38,7 +38,7 @@ export const History = ({ companies, schools }: Props) => {
 
                       return (
                         <div key={history.id} className="flex flex-col relative">
-                          <div className="flex flex-row space-x-2 justify-start items-center">
+                          <div className="flex flex-col lg:flex-row space-x-2 justify-start items-start lg:items-center">
                             <p className="text-xl">{role}</p>
                             <Badge variant="outline" className="bg-nav text-secondary">{formatedDate}</Badge>
                           </div>
@@ -73,7 +73,7 @@ export const History = ({ companies, schools }: Props) => {
 
                       return (
                         <div key={history.id} className="flex flex-col space-y-2 relative">
-                          <div className="flex flex-row space-x-2 justify-start items-center">
+                          <div className="flex flex-col lg:flex-row space-x-2 justify-start items-start lg:items-center">
                             <p className="text-xl">{role}</p>
                             <Badge variant="outline" className="bg-nav text-secondary">{formatedDate}</Badge>
                           </div>
