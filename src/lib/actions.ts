@@ -60,15 +60,13 @@ export async function getProjects() {
 export async function sendMail({ name, email, message }: { name: string, email: string, message: string }) {
   try {
     const transporter = createTransport({
-      service: 'gmail',
+      host: process.env.EMAIL_HOST,
+      secure: true,
       port: Number(process.env.EMAIL_PORT),
       auth: {
         user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-      tls: {
-        rejectUnauthorized: false,
-      },
+        pass: process.env.EMAIL_PASS
+      }
     });
 
     await transporter.sendMail({

@@ -2,6 +2,7 @@
   "Change language": "Mudar idioma",
   "Portuguese": "Português",
   "English": "Inglês",
+  "Español": "Espanhol",
   "Projects": "Projetos",
   "Contact": "Contato",
   "Software Engineer": "Engenheiro de Software",
@@ -18,10 +19,12 @@
   "Success!": "Sucesso!",
   "Your message was sent successfully!": "Sua mensagem foi enviada com sucesso!",
   "Send": "Enviar",
-  "Email must contain at least 3 character(s)": "O email deve conter no mínimo 3 caractere(s)",
-  "Email must not contain more than 255 character(s)": "O email não deve conter mais de 255 caractere(s)",
-  "Message must contain at least 3 character(s)": "A mensagem deve conter no mínimo 3 caractere(s)",
-  "Message must not contain more than 255 character(s)": "A mensagem não deve conter mais de 255 caractere(s)",
+  "Email must contain at least 3 characters": "O email deve conter no mínimo 3 caracteres",
+  "Email must not contain more than 255 characters": "O email não deve conter mais de 255 caracteres",
+  "Message must contain at least 3 characters": "A mensagem deve conter no mínimo 3 caracteres",
+  "Message must not contain more than 255 characters": "A mensagem não deve conter mais de 255 caracteres",
   "Invalid email": "Email inválido",
-  "Technologies": "Tecnologias"
+  "Technologies": "Tecnologias",
+  "Repository": "Repositório",
+  "Deploy": "Deploy"
 }

@@ -6,7 +6,11 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
   transpilePackages: ['lucide-react'],
   images: {
-    domains: ['ik.imagekit.io']
+    remotePatterns: [
+      {
+        hostname: 'ik.imagekit.io'
+      }
+    ]
   }
 }
 

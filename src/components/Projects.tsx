@@ -33,7 +33,7 @@ export const Projects = ({ projects }: Props) => {
       <Carousel>
         <CarouselContent>
           {projects.map((project) => {
-            const description = locale === "en" ? project.description : project[`description_${locale}` as keyof typeof project] as string
+            const description = project[`description_${locale}` as keyof typeof project] as string ?? project.description
 
             return (
               <CarouselItem key={project.id} className="flex flex-col gap-2 items-center justify-start basis-2/3 xl:basis-1/3">
@@ -50,9 +50,7 @@ export const Projects = ({ projects }: Props) => {
                   <p>{description}</p>
                   <div className="flex flex-row space-x-2">
                     {project.Link.map((link) => {
-                      const name = locale === "en"
-                        ? link.name
-                        : link[`name_${locale}` as keyof typeof link] as string ?? link.name
+                      const name = locale === "en" ? link.name : link[`name_${locale}` as keyof typeof link] as string ?? t(link.name)
 
                       return (
                         <Tooltip key={link.id}>

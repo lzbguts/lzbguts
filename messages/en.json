@@ -2,6 +2,7 @@
   "Change language": "Change language",
   "Portuguese": "Portuguese",
   "English": "English",
+  "Español": "Spanish",
   "Projects": "Projects",
   "Contact": "Contact",
   "Software Engineer": "Software Engineer",
@@ -18,10 +19,12 @@
   "Success!": "Success!",
   "Your message was sent successfully!": "Your message was sent successfully!",
   "Send": "Send",
-  "Email must contain at least 3 character(s)": "Email must contain at least 3 character(s)",
-  "Email must not contain more than 255 character(s)": "Email must not contain more than 255 character(s)",
-  "Message must contain at least 3 character(s)": "Message must contain at least 3 character(s)",
-  "Message must not contain more than 255 character(s)": "Message must not contain more than 255 character(s)",
+  "Email must contain at least 3 characters": "Email must contain at least 3 characters",
+  "Email must not contain more than 255 characters": "Email must not contain more than 255 characters",
+  "Message must contain at least 3 characters": "Message must contain at least 3 characters",
+  "Message must not contain more than 255 characters": "Message must not contain more than 255 characters",
   "Invalid email": "Invalid email",
-  "Technologies": "Technologies"
+  "Technologies": "Technologies",
+  "Repository": "Repository",
+  "Deploy": "Deploy"
 }

@@ -20,13 +20,13 @@
   }
 
   .dark {
-    --background: #151221;
-    --foreground: #d2337e;
+    --background: #020817;
+    --foreground: #689ff7;
     --foreground-hover: #ec85b5;
 
-    --nav: #181221;
+    --nav: #020817;
 
-    --secondary: #b2fff7;
+    --secondary: #72a7fd;
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;

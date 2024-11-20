@@ -1,16 +1,8 @@
 "use client"
 
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
 import { Globe } from "lucide-react"
 import { motion } from "framer-motion";
-import { useEffect, useState, useTransition } from "react";
+import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import {
   Popover,
@@ -18,7 +10,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 import { Separator } from "./ui/separator";
-import { useParams, usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 export const LanguageSwitcher = ({ className }: { className?: string }) => {
   const [mounted, setMounted] = useState(false)
@@ -57,8 +49,9 @@ export const LanguageSwitcher = ({ className }: { className?: string }) => {
         <div className="flex flex-col space-y-2 justify-center items-center">
           <p>{t("Change language")}</p>
           <Separator />
-          <button className="w-full hover:bg-background" onClick={() => changeLanguage("en")}>{t("English")}</button>
-          <button className="w-full hover:bg-background" onClick={() => changeLanguage("pt")}>{t("Portuguese")}</button>
+          <button className="w-full hover:bg-background" onClick={() => changeLanguage("en")}>{t("English")} (English)</button>
+          <button className="w-full hover:bg-background" onClick={() => changeLanguage("pt")}>{t("Portuguese")} (Português)</button>
+          <button className="w-full hover:bg-background" onClick={() => changeLanguage("es")}>{t("Español")} (Español)</button>
         </div>
       </PopoverContent>
     </Popover>

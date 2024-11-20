@@ -34,7 +34,7 @@ export const History = ({ companies, schools }: Props) => {
 
                       const formatedDate = `${initialDate} - ${finalDate}`
 
-                      const role = locale === "en" ? history.role : history[`role_${locale}` as keyof typeof history] as string
+                      const role = locale === "en" ? history.role : (history[`role_${locale}` as keyof typeof history] as string || history.role)
 
                       return (
                         <div key={history.id} className="flex flex-col relative">
@@ -69,7 +69,7 @@ export const History = ({ companies, schools }: Props) => {
 
                       const formatedDate = `${initialDate} - ${finalDate}`
 
-                      const role = locale === "en" ? history.role : history[`role_${locale}` as keyof typeof history] as string
+                      const role = locale === "en" ? history.role : (history[`role_${locale}` as keyof typeof history] as string || history.role)
 
                       return (
                         <div key={history.id} className="flex flex-col space-y-2 relative">

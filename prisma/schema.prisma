@@ -23,6 +23,7 @@ model Project {
   title          String
   description    String
   description_pt String
+  description_es String
   image          String
   initialDate    DateTime @default(now())
   Link           Link[]
@@ -32,6 +33,7 @@ model Link {
   id          String        @id @default(auto()) @map("_id") @db.ObjectId
   name        String
   name_pt     String?
+  name_es     String?
   url         String
   type        LinkType      @default(Project)
   //
@@ -56,8 +58,10 @@ model History {
   id             String       @id @default(auto()) @map("_id") @db.ObjectId
   role           String?
   role_pt        String?
+  role_es        String?
   description    String?
   description_pt String?
+  description_es String?
   initialDate    DateTime
   finalDate      DateTime?
   Institution    Institution? @relation(fields: [institutionId], references: [id])

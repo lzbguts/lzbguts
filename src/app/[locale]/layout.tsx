@@ -4,7 +4,6 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Sidebar } from "@/components/Sidebar";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from 'next-intl';
-import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { Toaster } from "@/components/ui/toaster";
 import { Inter } from 'next/font/google'
 import { getSocialMedia } from "@/lib/actions";
