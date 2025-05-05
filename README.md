@@ -30,8 +30,9 @@
 	<img src="./public/images/contact.png"></img>
 	<div align="center">
 		<br>
-		<a href="https://www.linkedin.com/in/gutsfelicidade/"><img width="240" height="56" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></img></a>&nbsp;&nbsp;
+		<a href="https://www.linkedin.com/in/gustavo-felicidade/"><img width="240" height="56" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></img></a>&nbsp;&nbsp;
 		<a href="mailto:gustavo.h.felicidade@gmail.com"><img width="167" height="56" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></img></a>&nbsp;&nbsp;
+		<a href="https://lzbguts.vercel.app/"><img width="240" height="56" src="https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=linkedin&logoColor=white"></img></a>&nbsp;&nbsp;
 	</div>
 </div>
 <hr></hr>
